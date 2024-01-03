@@ -35,8 +35,10 @@ The following tables lists the configurable parameters of the Plex chart and the
 | `ingress.enabled`              | Enables Ingress | `false` |
 | `ingress.annotations`          | Ingress annotations | `{}` |
 | `ingress.labels`               | Custom labels | `{}` |
-| `ingress.path`                 | Ingress path | `/` |
-| `ingress.hosts`                | Ingress accepted hostnames | `chart-example.local` |
+| `ingress.hosts`                | Ingress accepted hostnames | `[]` |
+| `ingress.hosts[].host`         | Ingress accepted hostname | `chart-example.local` |
+| `ingress.hosts[].path`         | Ingress path | `/` |
+| `ingress.hosts[].pathType`     | Ingress path type | `ImplementationSpecific` |
 | `ingress.tls`                  | Ingress TLS configuration | `[]` |
 | `rbac.create`                  | Create RBAC roles? | `true` |
 | `nodeSelector`             | Node labels for pod assignment | `kubernetes.io/arch: amd64` |
